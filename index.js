@@ -76,6 +76,15 @@ function renderData(arrData) {
     // }
 }
 
+
+/**
+ *
+ * @param {string} url
+ * @param {string} method
+ * @param {null} body
+ * @returns {Promise<string>}
+ */
+
 function fetch (url, { method = `GET`, body = null } = {} ) {
     return new Promise((resolve, reject) => {
         const xhr = new XMLHttpRequest();
