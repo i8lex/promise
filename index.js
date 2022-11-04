@@ -7,24 +7,24 @@ body.innerHTML =
     </section>`
 
 /**
- *
- * @param {string} name
- * @param {string} photo
- * @param {string} position
+ * @param {object} obj
+ * @param {string} obj.name
+ * @param {string} obj.photo
+ * @param {string} obj.position
  */
 
 function renderData({ name, photo, position }) {
     const wrapper = document.querySelector(`.section__wrapper`);
     // wrapper.innerHTML = ``;
 
-    const list = document.createElement(`li`);
-    list.classList.add(`section__list`);
-    list.innerHTML = `
+    const listItem = document.createElement(`li`);
+    listItem.classList.add(`section__list`);
+    listItem.innerHTML = `
         <h6 class="section__list__name">${name}</h6>
         <img class="section__list__photo" src="${photo}" alt="${name}">
         <p class="section__list__position">${position}</p>
     `
-    wrapper.append(list)
+    wrapper.append(listItem)
 }
 
 /**
